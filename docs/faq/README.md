@@ -13,8 +13,6 @@ Please contact us via [e-mail](support@arable.com) or phone +1 510-992-4095.
 You must be an Arable customer with an up-to date-software subscription.
 ## How do I get an API key?
 Refer to [this](https://developer.arable.com/guide/authentication.html#api-keys) section of the documentation.
-## What are the limitations of API requests?
-We request 
 ## Where can I find API reference documentation?
 Please refer to the [API Documentation](https://api-user.arable.cloud/api/v2/doc)
 ## Are there any client libraries for the Arable API?
