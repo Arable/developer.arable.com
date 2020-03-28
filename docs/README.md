@@ -33,6 +33,6 @@ curl -X GET \
   -H 'Authorization: Bearer <Token>' \
 ```
 
-::: warning VERSION NOTE
-Arable API 2.0 is in beta. See our changelog for release changes.
+::: tip VERSION NOTE
+Arable API 2.2.0 is now commercially released. See our changelog for release changes.
 :::
