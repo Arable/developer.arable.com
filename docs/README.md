@@ -3,7 +3,7 @@ home: true
 heroImage: /mark.jpg
 actionText: Get Started →
 actionLink: /guide/
-footer: Copyright © 2019 Arable Labs
+footer: Copyright © 2020 Arable Labs
 ---
 
 <!-- <div style="text-align: center">
@@ -29,7 +29,7 @@ footer: Copyright © 2019 Arable Labs
 
 ``` bash
 curl -X GET \
-  https://api.arable.cloud/api/v2/data/daily \
+  https://.arable.cloud/api/v2/data/daily \
   -H 'Authorization: Bearer <Token>' \
 ```
 
