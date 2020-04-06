@@ -29,7 +29,7 @@ footer: Copyright © 2019 Arable Labs
 
 ``` bash
 curl -X GET \
-  https://api-user.arable.cloud/api/v2/data/daily \
+  https://api.arable.cloud/api/v2/data/daily \
   -H 'Authorization: Bearer <Token>' \
 ```
 
