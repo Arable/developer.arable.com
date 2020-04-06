@@ -3,7 +3,7 @@ module.exports = [
   { text: "FAQ", link: "/faq/" },
   {
     text: "API Documentation",
-    link: "https://api-user.arable.cloud/api/v2/doc"
+    link: "https://api.arable.cloud/api/v2/doc"
   },
   {
     text: "Support",
