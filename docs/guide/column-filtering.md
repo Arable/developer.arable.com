@@ -13,19 +13,19 @@ The `X-Fields` header is a comma-separated list of the object fields you want re
 ### Usage
 
 Fetch the e-mail and first_name of a user:
-```bash curl -X GET https://api-user.arable.cloud/api/v2/users \
+```bash curl -X GET https://api.arable.cloud/api/v2/users \
   -H 'Authorization: Apikey <apikey>' \
   -H 'X-Fields: {email,first_name}'
 ```
 
 You can use nested brackets to filter nested objects or to filter a list of objects:
-```bash curl -X GET https://api-user.arable.cloud/api/v2/users \
+```bash curl -X GET https://api.arable.cloud/api/v2/users \
   -H 'Authorization: Apikey <apikey>' \
   -H 'X-Fields: {email,first_name,orgs{tenant}}'
 ```
 
 Use `*` to request all other fields:
-```bash curl -X GET https://api-user.arable.cloud/api/v2/users \
+```bash curl -X GET https://api.arable.cloud/api/v2/users \
   -H 'Authorization: Apikey <apikey>' \
   -H 'X-Fields: {orgs{tenant},*}'
 ```
@@ -43,7 +43,7 @@ For example, if you are interested in only temperature, humidity, and precipitat
 
 ```bash
 curl -i \
-  -G https://api-user.arable.cloud/api/v2/data/hourly \
+  -G https://api.arable.cloud/api/v2/data/hourly \
   -H "Authorization: Apikey <apikey>" \
   -H "Accept: text/csv" \
   -d "select=time,tair,rh,precip" \

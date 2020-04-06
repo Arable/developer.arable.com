@@ -14,7 +14,7 @@ You must be an Arable customer with an up-to date-software subscription.
 ## How do I get an API key?
 Refer to [this](https://developer.arable.com/guide/authentication.html#api-keys) section of the documentation.
 ## Where can I find API reference documentation?
-Please refer to the [API Documentation](https://api-user.arable.cloud/api/v2/doc)
+Please refer to the [API Documentation](https://api.arable.cloud/api/v2/doc)
 ## Are there any client libraries for the Arable API?
 At the moment, we are working on **Python** and **R** client libraries. Please reach out via [e-mail](mailto:support@arable.com) if you are interested in a beta.
 ## I'm having trouble with my code, where can I go for help?

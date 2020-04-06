@@ -4,14 +4,14 @@
 
 ## Understanding the Schema
 
-The [schemas](https://api-user.arable.cloud/api/v2/doc#operation/get_schemas) and [tables](https://api-user.arable.cloud/api/v2/doc#operation/get_schema) endpoints were intended to show the descriptions of the data that is available within the Arable platform.
+The [schemas](https://api.arable.cloud/api/v2/doc#operation/get_schemas) and [tables](https://api.arable.cloud/api/v2/doc#operation/get_schema) endpoints were intended to show the descriptions of the data that is available within the Arable platform.
 
 Fetching the available tables is the first step.
 
 Example:
 ```bash
 curl -X GET \
-  https://api-user.arable.cloud/api/v2/schemas \
+  https://api.arable.cloud/api/v2/schemas \
   -H 'Authorization: Basic dGVzdEB0ZXN0LmNvbTpnZXRtZWRhdGE=' \
 ```
 
@@ -20,7 +20,7 @@ The result will be an array of table names. Each of these table names can be use
 Example: 
 ```bash
 curl -X GET \
-  https://api-user.arable.cloud/api/v2/schemas/daily \
+  https://api.arable.cloud/api/v2/schemas/daily \
   -H 'Authorization: Basic dGVzdEB0ZXN0LmNvbTpnZXRtZWRhdGE=' \
 ```
 
@@ -47,7 +47,7 @@ This information can be helpful when interpreting the returned data or for narro
 
 ## Requesting Data
 
-The [data](https://api-user.arable.cloud/api/v2/doc#operation/get_data) endpoint provides access to time series data from a specified table. It takes the name of the table to query as a path parameter, and returns data in JSON or CSV format depending on the value of an optional `Accept` header (the default is JSON).
+The [data](https://api.arable.cloud/api/v2/doc#operation/get_data) endpoint provides access to time series data from a specified table. It takes the name of the table to query as a path parameter, and returns data in JSON or CSV format depending on the value of an optional `Accept` header (the default is JSON).
 
 Results are paginated as described under the Cursor Pagination section of these docs. Data units are converted according to the unit parameters provided on the request (example below). The data endpoint also accepts several filtering parameters:
 
@@ -67,7 +67,7 @@ Example (JSON):
 
 ```bash
 curl -i \
-  -G https://api-user.arable.cloud/api/v2/data/hourly \
+  -G https://api.arable.cloud/api/v2/data/hourly \
   -H "Authorization: Apikey <apikey>" \
   -d "select=time,tair,rh,slp,precip" \
   -d "device=A123456" \
@@ -114,7 +114,7 @@ Example (CSV):
 
 ```bash
 curl -i \
-  -G https://api-user.arable.cloud/api/v2/data/hourly \
+  -G https://api.arable.cloud/api/v2/data/hourly \
   -H "Authorization: Apikey <apikey>" \
   -H "Accept: text/csv" \
   -d "select=time,tair,rh,slp,precip" \
@@ -147,7 +147,7 @@ Example (with unit conversion):
 
 ```bash
 curl -i \
-  -G https://api-user.arable.cloud/api/v2/data/hourly \
+  -G https://api.arable.cloud/api/v2/data/hourly \
   -H "Authorization: Apikey <apikey>" \
   -H "Accept: text/csv" \
   -d "select=time,tair,rh,slp,precip" \

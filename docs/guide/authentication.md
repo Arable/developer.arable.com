@@ -28,7 +28,7 @@ token = b64encode("{0}:{1}".format(username, password).encode('utf-8')).decode('
 
 Request using `basic auth`:
 ```bash curl -X GET \
-  https://api-user.arable.cloud/api/v2/devices \
+  https://api.arable.cloud/api/v2/devices \
   -H 'Authorization: Basic dGVzdEB0ZXN0LmNvbTpnZXRtZWRhdGE=' \
 ```
 
@@ -39,7 +39,7 @@ In applications where retaining the password is not recommended, the `bearer tok
 Example:
 ``` bash
 curl -X POST \
-  https://api-user.arable.cloud/api/v2/auth/token \
+  https://api.arable.cloud/api/v2/auth/token \
   -H 'Content-Type: application/json' \
   -d '{"email": "<email address>", "password": "<plaintext password>"}'
 ```
@@ -55,7 +55,7 @@ Each subsequent request to the API can use this token to gain access to endpoint
 Example:
 ```bash
  curl -X GET \
-  https://api-user.arable.cloud/api/v2/devices \
+  https://api.arable.cloud/api/v2/devices \
   -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOi8vYXBpLmFyYWJsZS5jb20iLCJpYXQiOjE1NjMxMjc1MjUsImp0aSI6IjVjMmU0OGM4Y2RjZjQ5ZGQ4NDEyY...' \
 ```
 
@@ -72,7 +72,7 @@ This token must be kept as a secret and discarded when a user requests to be log
 1) You can use `API key` in `authorization` header:
 ```bash
  curl -X GET \
-  https://api-user.arable.cloud/api/v2/devices \
+  https://api.arable.cloud/api/v2/devices \
   -H 'Authorization: Apikey dcd023786-00e1-4220-8a5c-23261821c1ff'
 ```
 
@@ -86,7 +86,7 @@ Be aware of the risk when sharing your `API key` in a url. Anyone who gets your 
 :::
 
 ### Creation
-Here is the [API reference](https://api-user.arable.cloud/api/v2/doc#operation/post_apikey_list) for creating an `API key`.
+Here is the [API reference](https://api.arable.cloud/api/v2/doc#operation/post_apikey_list) for creating an `API key`.
 
 ::: tip Tip
 You need to use either [basic auth](#basic auth) or a [bearer token](#bearer token) to create an `API key`. You can't create a new `API key` with an old `API key`.
@@ -95,7 +95,7 @@ You need to use either [basic auth](#basic auth) or a [bearer token](#bearer tok
 Request Example:
 ```bash
 curl -X POST \
-  https://api-user.arable.cloud/api/v2/apikeys \
+  https://api.arable.cloud/api/v2/apikeys \
   -H 'authorization: Basic dGVzdEB0ZXN0LmNvbTpnZXRtZWRhdGE' \
   -H 'content-type: application/json' \
   -d '{
@@ -129,7 +129,7 @@ Response:
 Then you can use the `API key` field from the response in a request like [this](#usage).
 
 #### Scopes
-You must specify `scopes` when creating an `API key`. Supported `scopes` can be found in the [API reference](https://api-user.arable.cloud/api/v2/doc#operation/post_apikey_list). The most up-to-date definitions of all available `scopes` can be found in [this](https://api-user.arable.cloud/api/v2/apikeys/scopes) endpoint.
+You must specify `scopes` when creating an `API key`. Supported `scopes` can be found in the [API reference](https://api.arable.cloud/api/v2/doc#operation/post_apikey_list). The most up-to-date definitions of all available `scopes` can be found in [this](https://api.arable.cloud/api/v2/apikeys/scopes) endpoint.
 
 Here is an example of `scopes` definitions:
 ```
@@ -165,12 +165,12 @@ It is an array of strings.
 `Exp` defines the expiration datetime (UTC) of `API key`. It is optional. You don't need to provide this field if you don't want it to expire.
 
 ### List all the API keys you own
-[API reference](https://api-user.arable.cloud/api/v2/doc#operation/get_apikey_list).
+[API reference](https://api.arable.cloud/api/v2/doc#operation/get_apikey_list).
 
 Request Example:
 ```bash
 curl -X GET \
-  https://api-user.arable.cloud/api/v2/apikeys \
+  https://api.arable.cloud/api/v2/apikeys \
   -H 'authorization: Basic dGVzdEB0ZXN0LmNvbTpnZXRtZWRhdGE' \
 ```
 
@@ -209,7 +209,7 @@ Response:
 ```
 
 ### Update an API Key
-Here is the [API reference](https://api-user.arable.cloud/api/v2/doc#operation/put_apikey) for updating an `API key`.
+Here is the [API reference](https://api.arable.cloud/api/v2/doc#operation/put_apikey) for updating an `API key`.
 
 You can change the `scope`, `name`, and `exp` of an `API key`. You can also deactivate it by setting `active` field to `false`.
 Update an `API key` by its `id` (`5d35e188f65b2214626ecwqwer` in this example), not the `API key` value.
@@ -249,7 +249,7 @@ Response
 ```
 
 ### Delete an API Key
-Here is the [API reference](https://api-user.arable.cloud/api/v2/doc#operation/put_apikey) for deleting an `API key`.
+Here is the [API reference](https://api.arable.cloud/api/v2/doc#operation/put_apikey) for deleting an `API key`.
 Delete an `API key` by its `id` (`5d35e188f65b2214626ecwqwer` in this example), not the `API key` value.
 
 Request Example:

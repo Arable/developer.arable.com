@@ -6,7 +6,7 @@ For model data (e.g., devices or locations), use the `limit` parameter to specif
 Example:
 ```bash
 curl \
-  -G https://api-user.arable.cloud/api/v2/devices \
+  -G https://api.arable.cloud/api/v2/devices \
   -H "Authorization: Apikey <apikey>" \
   -d "limit=2" \
   -d "page=2"
@@ -34,7 +34,7 @@ For time series data, we still use `limit`, but with a `cursor` marking the next
 Example (no cursor, default order):
 ```bash
 curl -i \
-  -G https://api-user.arable.cloud/api/v2/data/hourly \
+  -G https://api.arable.cloud/api/v2/data/hourly \
   -H "Authorization: Apikey <apikey>" \
   -H "Accept: text/csv" \
   -d "select=time,tair" \
@@ -67,7 +67,7 @@ time,tair
 Example (no cursor, descending order):
 ```bash
 curl \
-  -G https://api-user.arable.cloud/api/v2/data/hourly \
+  -G https://api.arable.cloud/api/v2/data/hourly \
   -H "Authorization: Apikey <apikey>" \
   -H "Accept: text/csv" \
   -d "select=time,tair" \
@@ -98,7 +98,7 @@ Include this token as the `cursor` query parameter in your next request to get t
 
 ```bash
 curl -i \
-  -G https://api-user.arable.cloud/api/v2/data/hourly \
+  -G https://api.arable.cloud/api/v2/data/hourly \
   -H "Authorization: Apikey <apikey>" \
   -H "Accept: text/csv" \
   -d "select=time,tair" \
