@@ -1,12 +1,12 @@
 {
   "devDependencies": {
-    "vuepress": "^1.2.0"
+    "vuepress": "^1.8.0"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "vuepress-plugin-dehydrate": "^1.1.1"
+    "vuepress-plugin-dehydrate": "^1.1.5"
   }
 }
