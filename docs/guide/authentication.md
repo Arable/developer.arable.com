@@ -80,9 +80,9 @@ This token must be kept as a secret and discarded when a user requests to be log
 ```
 /api/v2/locations/summary?apikey=dcd023786-00e1-4220-8a5c-23261821c1ff
 ```
-
-::: danger Security Risk
-Be aware of the risk when sharing your `API key` in a url. Anyone who gets your `API key` will get all the permission [scopes](#scopes) you granted to it. Only share an `API key` with an expiration datetime on it. You can modify or deactivate an `API key` after sharing it.
+::: warning Deprecation Warning
+Because of the security risk to `API keys` being visible in urls. 
+We will deprecate this authentication method in a future release.
 :::
 
 ### Creation
