@@ -82,7 +82,7 @@ This token must be kept as a secret and discarded when a user requests to be log
 ```
 ::: warning Deprecation Warning
 Because of the security risk to `API keys` being visible in urls. 
-We will deprecate this authentication method in a future release.
+We will deprecate this authentication method by May 14, 2021.
 :::
 
 ### Creation
