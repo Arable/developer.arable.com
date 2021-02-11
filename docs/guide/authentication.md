@@ -81,8 +81,7 @@ This token must be kept as a secret and discarded when a user requests to be log
 /api/v2/locations/summary?apikey=dcd023786-00e1-4220-8a5c-23261821c1ff
 ```
 ::: warning Deprecation Warning
-Because of the security risk to `API keys` being visible in urls. 
-We will deprecate this authentication method by May 14, 2021.
+Because of the security risk to `API keys` being visible in urls, this feature is deprecated and will be disabled on May 14, 2021.
 :::
 
 ### Creation
