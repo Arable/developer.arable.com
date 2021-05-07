@@ -211,6 +211,7 @@ Example:
 | pres  | **mb*, kp  | Pressure (e.g., sea level pressure) in either millibars or kilopascals   |
 | size | **mm*, in  | Size (e.g., rain) in either millimeters or inches   |
 | ratio | **pct*, dec  | Ratios (e.g., relative humidity) in percentages or decimals  |
+| speed | **mps*, kph, mph | Speed (e.g., wind speed) in meters per second, kilometers per hour, or miles per hour |
 _* Denotes default_
 
 
