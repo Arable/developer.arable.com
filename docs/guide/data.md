@@ -56,6 +56,7 @@ Results are paginated as described under the Cursor Pagination section of these 
 - `select`: comma-separated string of requested column names (default is all available columns). More detail on when to use this can be found [here](column-filtering.md#select);
 - `start_time`: query start time as an iso-formatted string (default depends on the table queried);
 - `end_time`: query end time as an iso-formatted string (default is the current time).
+- `limit`: limit the number of records returned from a query (see information about [default limits](data.md#data-limits))
 
 It also accepts a result formatting option:
 - `local_time`: there are three potential input formats. If included on the request, the results will include a `local_time` column with `time`: converted to the specified time zone or offset by the specified amount of time. Though most tables store data in UTC, there are a few tables which do not and are detailed [here](#table-timezones). The three potential formats are:
@@ -215,3 +216,13 @@ Example:
 _* Denotes default_
 
 
+## Data Limits
+
+By default the data returned to the client is limited based upon time resolution. 
+The more granular the data, the larger the default limit, but the fewer number of calendar days. 
+
+| Resolution | Rows | Calendar Equivalent|
+|---|---|---|
+| 5 minute data| 2050 rows | ~7 days of data
+|hourly| 2400 | 100 days
+|daily| 730   | 2 years
