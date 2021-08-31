@@ -34,5 +34,5 @@ curl -X GET \
 ```
 
 ::: tip VERSION NOTE
-Arable API 3.1.0 is now commercially released. See our changelog for release changes.
+Arable API 3.2.0 is now commercially released. See our changelog for release changes.
 :::
