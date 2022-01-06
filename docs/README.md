@@ -3,7 +3,7 @@ home: true
 heroImage: /mark.jpg
 actionText: Get Started →
 actionLink: /guide/
-footer: Copyright © 2021 Arable Labs
+footer: Copyright © 2022 Arable Labs
 ---
 
 <!-- <div style="text-align: center">
