@@ -3,7 +3,7 @@ home: true
 heroImage: /mark.jpg
 actionText: Get Started →
 actionLink: /guide/
-footer: Copyright © 2021 Arable Labs
+footer: Copyright © 2022 Arable Labs
 ---
 
 <!-- <div style="text-align: center">
@@ -34,5 +34,5 @@ curl -X GET \
 ```
 
 ::: tip VERSION NOTE
-Arable API 3.2.0 is now commercially released. See our changelog for release changes.
+Arable API 3.3.1 is now commercially released. See our changelog for release changes.
 :::
