@@ -226,3 +226,7 @@ The more granular the data, the larger the default limit, but the fewer number o
 | 5 minute data| 2050 rows | ~7 days of data
 |hourly| 2400 | 100 days
 |daily| 730   | 2 years
+
+## Data Aggregations
+
+See *Data Aggregations* section [here](aggregation.html)
