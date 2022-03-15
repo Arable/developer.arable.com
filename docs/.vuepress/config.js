@@ -26,6 +26,7 @@ module.exports = {
             'pagination',
             //'permission-system',
             'data',
+            'aggregation',
             'column-filtering',
             'errors'
           ]
