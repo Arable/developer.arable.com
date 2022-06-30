@@ -1,10 +1,10 @@
 FROM node:15.5-alpine3.10 as build-deps
 
 WORKDIR /app
-COPY package.json yarn.lock ./
-RUN yarn
-COPY . ./
-RUN yarn docs:build
+COPY package.json LICENSE ./
+COPY docs ./docs/
+
+RUN yarn install && yarn docs:build
 
 
 FROM nginx:1.19.6-alpine
