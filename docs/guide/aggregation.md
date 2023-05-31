@@ -12,23 +12,24 @@ The aggregations referred to here are available via the [data](https://api.arabl
 
 ### Table: Daily 
 
-| Metric  | Variable Name  | Aggregation Function  |
+| Metric | Variable Name | Aggregation Function |
 |---|---|---|
 | Air Temp | meant | mean | 
-| Air Temp | maxt | max | 
-| Air Temp | mint | min | 
+| Air Temp | maxt | max |
+| Air Temp | mint | min |
 | Air Temp | maxt_time | time of maximum temperature in the day |
 | Air Temp |  mint_time | time of minimum temperature in the day |
-| Relative Humidity| rh_mean | mean | 
-| Relative Humidity| rh_max | max |
-| Relative Humidity| rh_at_maxt | rh value at time of maximum air temperature | 
-| Relative Humidity| rh_at_mint | rh value at time of minimum air temperature |
-| Sea Level Pressure | slp | mean
+| Relative Humidity | mean_rh | mean |
+| Relative Humidity | max_rh | max |
+| Relative Humidity | min_rh | min |
+| Relative Humidity | rh_at_maxt | rh value at time of maximum air temperature |
+| Relative Humidity | rh_at_mint | rh value at time of minimum air temperature |
+| Sea Level Pressure | slp | mean |
 | Dew Temp | tdew | mean |
 | Dew Temp | max_tdew | max |
 | Dew Temp | tdew_at_mint | tdew value at time of minimum air temperature |
 | Vapor Pressure | ea | mean |
-| Vapor Pressure Deficit | vpd | mean | 
+| Vapor Pressure Deficit | vpd | mean |
 | Evapotranspiration | et | sum |
 | Crop Evapotranspiration | etc | sum |
 | Shortwave Downwelling | swdw | `sum(total seconds * swdw)/1e6` |
@@ -41,34 +42,28 @@ The aggregations referred to here are available via the [data](https://api.arabl
 | Wind Speed | wind_speed | mean |
 | Wind Speed | wind_speed_max | max |
 | Wind Direction | wind_direction | mean |
-| Precipitation | precip | mean |
-
-
+| Precipitation | precip | sum |
 
 
 ### Local Hourly / Hourly
-| Metric  | Variable Name  | Aggregation Function  |
+
+| Metric  | Variable Name  | Aggregation Function |
 |---|---|---|
-| Air Temp | tair | mean | 
-| Air Temp | maxt | max | 
+| Air Temp | tair | mean |
+| Air Temp | maxt | max |
 | Air Temp | mint | min |
 | Temperature Below (canopy/ground) | tbelow | mean |
 | Sea Level Pressure | slp | mean |
-| Relative Humidity| rh | mean | 
-| Relative Humidity| min_rh | min |
-| Relative Humidity| rh_at_maxt | rh value at time of maximum air temperature |
+| Relative Humidity | rh | mean |
+| Relative Humidity | max_rh | max |
+| Relative Humidity | min_rh | min |
+| Relative Humidity | rh_at_maxt | rh value at time of maximum air temperature |
+| Relative Humidity | rh_at_mint | rh value at time of minimum air temperature |
 | Dew Temp | tdew | mean |
 | Vapor Pressure | ea | mean |
-| Vapor Pressure Deficit | vpd | mean | 
+| Vapor Pressure Deficit | vpd | mean |
 | Evapotranspiration | et | sum |
 | Crop Evapotranspiration | etc | sum |
 | Shortwave Downwelling | swdw | mean |
 | Shortwave Upwelling | swuw | mean |
-
-
-
-
-
-
-
 
