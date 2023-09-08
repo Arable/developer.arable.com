@@ -11,6 +11,7 @@ All data is sent and received as JSON.
 
 | API Version | Release Date | Software Version |
 |---|---|---|
+|3.9.1|2023-08-23|[3.62.0](https://api.arable.cloud/api/v2/doc#section/Changelog/3.62.0)|
 |3.7.0|2023-03-29|[3.51.0](https://api.arable.cloud/api/v2/doc#section/Changelog/3.51.0)|
 |3.6.0|2022-11-09|[3.44.0](https://api.arable.cloud/api/v2/doc#section/Changelog/3.44.0)|
 |3.5.0|2022-07-28|[3.40.0](https://api.arable.cloud/api/v2/doc#section/Changelog/3.40.0)|
