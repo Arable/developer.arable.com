@@ -43,18 +43,17 @@ The aggregations referred to here are available via the [data](https://api.arabl
 | Wind Speed                             | wind_speed_max           | max                                                                             |
 | Wind Speed                             | wind_speed_min           | min                                                                             |
 | Wind Direction                         | wind_direction           | mean                                                                            |
-| Wind Heading                           | wind_heading             |                                                                                 |
+| Wind Heading                           | wind_heading             | mean                                                                            |
 | Precipitation                          | precip                   | sum                                                                             |
 | Precipitation Hours                    | precip_hours             | sum                                                                             |
-| Precipitation Rate                     | prate                    |                                                                                 |
 | Crop Water Demand                      | crop_water_demand        | `precip - etc`                                                                  |
 | Flow Rate                              | flow_rate                | mean                                                                            |
-| Heat Stress                            | heat_stress              |                                                                                 |
-| Heat Stress Hours                      | heat_stress_hours        |                                                                                 |
+| Heat Stress                            | heat_stress              | `len(hot_daytime_hours) / len(daytime_hours)`                                   |
+| Heat Stress Hours                      | heat_stress_hours        | `len(hot_daytime_hours)`                                                        |
 | Irrigation Volume                      | irrigation_volume        | irrigation volume per day in cubic meters (m3)"                                 |
 | Irrigation Runtime Hours               | irrigation_runtime_hours | no. of houts irrigation occurred in that day                                    |
 | Last Irrigation Time                   | last_irrigation_time     | timestamp indicating last irrigation time of the day                            |
-| Crop Coefficient                       | kc                       |                                                                                 |
+| Crop Coefficient                       | kc                       | factor to calculate ETc from ET                                                 |
 | Leaf Wetness                           | lfw                      | sum                                                                             |
 | Quality                                | low_quality              | true for low data quality                                                       |
 | Sample Percentage                      | sample_pct               | count                                                                           |
@@ -103,14 +102,14 @@ The aggregations referred to here are available via the [data](https://api.arabl
 | Spectrometer Band Upwelling       | b6uw           | mean                                        |
 | Spectrometer Band Downwelling     | b7dw           | mean                                        |
 | Spectrometer Band Upwelling       | b7uw           | mean                                        |
-| Leaf Wetness                      | lfw            |                                             |
+| Leaf Wetness                      | lfw            | sum                                         |
 | Quality                           | low_quality    | true for low data quality                   |
 | Sample Percentage                 | sample_pct     | count                                       |
 | Wind Speed                        | wind_speed     | mean                                        |
 | Wind Speed                        | wind_speed_max | max                                         |
 | Wind Speed                        | wind_speed_min | min                                         |
-| Wind Direction                    | wind_direction |                                             |
-| Wind Heading                      | wind_heading   |                                             |
+| Wind Direction                    | wind_direction | mean                                        |
+| Wind Heading                      | wind_heading   | mean                                        |
 
 
 ### Sentek Daily / Sentek Hourly
