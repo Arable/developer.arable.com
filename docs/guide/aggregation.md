@@ -263,14 +263,15 @@ The aggregations referred to here are available via the [data](https://api.arabl
 
 ### Location Irrigation Forecast Daily
 
-| Metric                  | Variable Name     | Aggregation Function |
-|-------------------------|-------------------|----------------------|
-| Evapotranspiration      | et                | sum                  |
-| Crop Evapotranspiration | etc               | sum                  |
-| Growing Degree Day      | gdd               |                      |
-| Precipitation           | precip            | sum                  |
-| Crop Water Demand       | crop_water_demand | `precip - etc`       |
-| Relative Humidity       | rh                | mean                 |
-| Air Temp                | maxt              | max                  |
-| Air Temp                | mint              | min                  |
-| Dew Temp                | tdew              | mean                 |
+| Metric                  | Variable Name     | Aggregation Function     |
+|-------------------------|-------------------|--------------------------|
+| Evapotranspiration      | et                | sum                      |
+| Crop Evapotranspiration | etc               | sum                      |
+| Precipitation           | precip            | sum                      |
+| Crop Water Demand       | crop_water_demand | `precip - etc`           |
+| Relative Humidity       | rh                | mean                     |
+| Air Temp                | maxt              | max                      |
+| Air Temp                | mint              | min                      |
+| Dew Temp                | tdew              | mean                     |
+| Growing Degree Day      | gdd               | `avg(maxt, mint) - 10))` |
+| Forecasted Runtime      | fcst_run_time     | sum                      |
